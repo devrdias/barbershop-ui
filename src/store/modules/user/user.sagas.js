@@ -6,7 +6,6 @@ import { updateProfileSuccess, updateProfileFailure } from './user.actions';
 export function* updateProfile({ payload }) {
   try {
     const { name, email, avatar_id, ...rest } = payload.data;
-    debugger;
 
     const profile = {
       name,

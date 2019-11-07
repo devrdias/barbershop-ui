@@ -14,7 +14,6 @@ export default function AvatarInput() {
 
   useEffect(() => {
     if (ref.current) {
-      debugger;
       registerField({
         name: 'avatar_id',
         ref: ref.current,
@@ -31,7 +30,6 @@ export default function AvatarInput() {
     const response = await api.post('files', data);
 
     const { id, url } = response.data;
-    debugger;
 
     setFile(id);
     setPreview(url);
